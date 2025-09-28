@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\backend\AdminAuthController;
+use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 
 // Route::get('/', function () {
@@ -27,7 +30,11 @@ Route::get('event-details', [FrontendController::class, 'eventDetails']);
 Route::get('event-register', [FrontendController::class, 'eventRegister']);
 Route::get('research', [FrontendController::class, 'research']);
 
-Auth::routes();
+//AdminLogin......
+Route::get('/admin/login',[AdminAuthController::class, 'adminLogin']);
+Route::get('/admin/logout',[AdminAuthController::class, 'adminLogout']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+Route::get('/admin/dashboard', [AdminController::class, 'adminDashbord']);
 
