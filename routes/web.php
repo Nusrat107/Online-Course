@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\AboutController;
 use App\Http\Controllers\backend\AdminAuthController;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\FrontendController;
@@ -37,4 +38,5 @@ Route::get('/admin/logout',[AdminAuthController::class, 'adminLogout']);
 
 Auth::routes();
 Route::get('/admin/dashboard', [AdminController::class, 'adminDashbord']);
+Route::get('/admin/about-us', [AboutController::class, 'about']);
 
