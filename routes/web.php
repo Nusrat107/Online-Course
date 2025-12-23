@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\AboutController;
 use App\Http\Controllers\backend\AdminAuthController;
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\courseController;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -38,5 +39,11 @@ Route::get('/admin/logout',[AdminAuthController::class, 'adminLogout']);
 
 Auth::routes();
 Route::get('/admin/dashboard', [AdminController::class, 'adminDashbord']);
-Route::get('/admin/about-us', [AboutController::class, 'about']);
 
+//.............About..............
+Route::get('/admin/about-us', [AboutController::class, 'about']);
+Route::get('/admin/about-list', [AboutController::class, 'aboutList']);
+
+//.............Course............
+Route::get('/admin/all-course', [courseController::class, 'allCourse']);
+Route::get('/admin/course-details', [courseController::class, 'courseDetails']);

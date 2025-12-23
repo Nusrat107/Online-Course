@@ -11,4 +11,10 @@ class AboutController extends Controller
   {
     return view('backend.about-us.about');
   }
+
+
+  public function aboutList()
+  {
+    return view('backend.about-us.about-list');
+  }
 }

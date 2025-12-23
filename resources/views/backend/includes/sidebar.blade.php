@@ -237,14 +237,14 @@
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>About Us</span></a>
                 <ul class="ml-menu">
                     <li><a href="{{url('/admin/about-us')}}">Add-About</a></li>
-                    <li><a href="chat.html">List-About</a></li>
+                    <li><a href="{{url('/admin/about-list')}}">List-About</a></li>
                     
                 </ul>
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Admission</span></a>
                 <ul class="ml-menu">
-                    <li><a href="#">All Course</a></li>
-                    <li><a href="#">Course Details</a></li>
+                    <li><a href="{{url('/admin/all-course')}}">All Course</a></li>
+                    <li><a href="{{url('/admin/course-details')}}">Course Details</a></li>
                     <li><a href="#">Admission</a></li>
                     <li><a href="#">Awards</a></li>
                 </ul>
